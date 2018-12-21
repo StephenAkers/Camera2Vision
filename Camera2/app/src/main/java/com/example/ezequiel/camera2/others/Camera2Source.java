@@ -1439,7 +1439,9 @@ public class Camera2Source {
         @Override
         public void onImageAvailable(ImageReader reader) {
             if(mDelegate != null) {
-                mDelegate.onPictureTaken(reader.acquireNextImage());
+                Image img = reader.acquireNextImage();
+                mDelegate.onPictureTaken(img);
+                img.close();
             }
         }
 
