@@ -15,7 +15,6 @@ import android.graphics.PointF;
 import android.graphics.PorterDuff;
 
 import com.example.ezequiel.camera2.R;
-import com.example.ezequiel.camera2.others.GraphicOverlay;
 import com.google.android.gms.vision.face.Face;
 import com.google.android.gms.vision.face.Landmark;
 
@@ -30,27 +29,27 @@ public class FaceGraphic extends GraphicOverlay.Graphic {
     private Resources resources;
 
     private int faceId;
-    PointF facePosition;
-    float faceWidth;
-    float faceHeight;
-    PointF faceCenter;
-    float isSmilingProbability = -1;
-    float eyeRightOpenProbability = -1;
-    float eyeLeftOpenProbability = -1;
-    float eulerZ;
-    float eulerY;
-    PointF leftEyePos = null;
-    PointF rightEyePos = null;
-    PointF noseBasePos = null;
-    PointF leftMouthCorner = null;
-    PointF rightMouthCorner = null;
-    PointF mouthBase = null;
-    PointF leftEar = null;
-    PointF rightEar = null;
-    PointF leftEarTip = null;
-    PointF rightEarTip = null;
-    PointF leftCheek = null;
-    PointF rightCheek = null;
+    private PointF facePosition;
+    private float faceWidth;
+    private float faceHeight;
+    private PointF faceCenter;
+    private float isSmilingProbability = -1;
+    private float eyeRightOpenProbability = -1;
+    private float eyeLeftOpenProbability = -1;
+    private float eulerZ;
+    private float eulerY;
+    private PointF leftEyePos = null;
+    private PointF rightEyePos = null;
+    private PointF noseBasePos = null;
+    private PointF leftMouthCorner = null;
+    private PointF rightMouthCorner = null;
+    private PointF mouthBase = null;
+    private PointF leftEar = null;
+    private PointF rightEar = null;
+    private PointF leftEarTip = null;
+    private PointF rightEarTip = null;
+    private PointF leftCheek = null;
+    private PointF rightCheek = null;
 
     private volatile Face mFace;
 

@@ -14,8 +14,6 @@ import android.view.WindowManager;
 
 import com.google.android.gms.common.images.Size;
 
-import java.util.ArrayList;
-
 public class Utils {
 
     public static int dpToPx(int dp) {

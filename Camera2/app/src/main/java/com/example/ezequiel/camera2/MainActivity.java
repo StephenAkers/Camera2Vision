@@ -81,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
 
-        takePictureButton = (Button) findViewById(R.id.btn_takepicture);
-        switchButton = (Button) findViewById(R.id.btn_switch);
-        videoButton = (Button) findViewById(R.id.btn_video);
-        mPreview = (CameraSourcePreview) findViewById(R.id.preview);
-        mGraphicOverlay = (GraphicOverlay) findViewById(R.id.faceOverlay);
-        cameraVersion = (TextView) findViewById(R.id.cameraVersion);
-        ivAutoFocus = (ImageView) findViewById(R.id.ivAutoFocus);
+        takePictureButton = findViewById(R.id.btn_takepicture);
+        switchButton = findViewById(R.id.btn_switch);
+        videoButton = findViewById(R.id.btn_video);
+        mPreview = findViewById(R.id.preview);
+        mGraphicOverlay = findViewById(R.id.faceOverlay);
+        cameraVersion = findViewById(R.id.cameraVersion);
+        ivAutoFocus = findViewById(R.id.ivAutoFocus);
 
         if(checkGooglePlayAvailability()) {
             requestPermissionThenOpenCamera();
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
     final CameraSource.PictureCallback cameraSourcePictureCallback = new CameraSource.PictureCallback() {
         @Override
         public void onPictureTaken(Bitmap picture) {
-            Log.d(TAG, "Taken picture is here!");
+            Log.d(TAG, "Picture is taken here!");
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -280,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
         @TargetApi(Build.VERSION_CODES.LOLLIPOP)
         @Override
         public void onPictureTaken(Image image) {
-            Log.d(TAG, "Taken picture is here!");
+            Log.d(TAG, "Picture is taken here!");
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
